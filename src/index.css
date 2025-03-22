@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+img {
+    outline: none;
+}
+
+img:focus {
+    outline: none;
+    border: none;
+}
