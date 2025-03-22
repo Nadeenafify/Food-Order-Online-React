@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import toast from 'react-hot-toast';
-
+import { Helmet } from 'react-helmet-async';
 // Define validation schema using Yup
 const schema = yup.object().shape({
     name: yup.string().required("Name is required"),
@@ -28,6 +28,7 @@ const Contacts = () => {
     };
     return (
         <>
+         <Helmet>Contacts</Helmet>
             <div className='mt-40 mx-4 sm:mx-20 lg:mx-40 xl:mx-60 h-[60vh] '>
                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
                     

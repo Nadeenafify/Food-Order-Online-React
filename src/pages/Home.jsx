@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { food_list } from "../../public/assets/frontend_assets/assets";
 import FoodView from '../components/FoodView';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 const Home = () => {
 
     //food list to show
@@ -22,6 +23,7 @@ const Home = () => {
 
   return (
     <>
+    <Helmet>Home</Helmet>
     <div className="mx-4 sm:mx-10 lg:mx-20 xl:mx-40 mt-10 relative">
        <img src="assets\frontend_assets\header_img.png"  alt="search-icon"/>
        <h4 className="font-bold text-xl sm:text-3xl md:text-4xl xl:text-5xl text-white absolute sm:top-20 xl:top-40 md:top-30 sm:left-20 left-5 top-13 leading-relaxed">Order Your <br/> Favourite Food Here</h4>

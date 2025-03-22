@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { dishes } from '../../public/assets/frontend_assets/dishes';
 import { useState } from 'react';
 import FoodView from '../components/FoodView';
+import { Helmet } from 'react-helmet-async';
 const Dishes = () => {
 
 
@@ -107,7 +108,9 @@ const Dishes = () => {
 
 
     return (
-        <div className=' px-4 sm:px-10 lg:px-10 xl:px-25 mt-10'>
+        <>
+        <Helmet>Dishes</Helmet>
+          <div className=' px-4 sm:px-10 lg:px-10 xl:px-25 mt-10'>
             <h1 className='font-bold text-3xl mx-4 sm:mx-10 lg:mx-20 xl:mx-25'>Discover Top Dishes</h1>
             <div className="px-4 sm:px-10 lg:px-10 xl:px-23 mt-10 ">
                 <Slider {...settings}>
@@ -239,6 +242,7 @@ const Dishes = () => {
 
 
         </div>
+        </>
     )
 }
 
