@@ -1,7 +1,7 @@
 import React from 'react'
 import { dishes } from '../../public/assets/frontend_assets/dishes';
 import { useState } from 'react';
-import FoodOffers from '../components/foodOffers';
+import FoodOffers from '../components/FoodOffers';
 import { Helmet } from 'react-helmet-async';
 const Offeres = () => {
 
