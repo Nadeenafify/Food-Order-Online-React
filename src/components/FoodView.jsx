@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { add_item } from '../redux/actions';
 import { Toaster, toast } from 'react-hot-toast';
-import useStore from '../zustand/Store';
+// import useStore from '../zustand/Store';
 import { useRecoilState } from "recoil";
 import { cartState } from "../recoil/atoms"
 import { useAtom } from "jotai";
@@ -23,7 +23,7 @@ const FoodView = observer((props) => {
    const dispatch = useDispatch();
  
    //zustand,recoil,jotai,mobx
-   const { cartt, addElement } = useStore()
+   // const { cartt, addElement } = useStore()
    const [cartst, setCartst] = useRecoilState(cartState);
    const [cartjotai, setCartJotai] = useAtom(cartAtom);
    console.log(toJS(cartStore.cart));
@@ -66,7 +66,7 @@ const FoodView = observer((props) => {
           onClick={() => {
             if(isAuthenticated){
               dispatch(add_item(props?.food))
-              addElement(props?.food)
+              // addElement(props?.food)
               setCartst(addelementRecoil(props?.food))
               setCartJotai(addelementRecoil(props?.food))
               cartStore.addElementMobx(props?.food)
