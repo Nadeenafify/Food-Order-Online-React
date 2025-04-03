@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
 import { remove_item } from '../redux/actions';
 import { toast } from 'react-hot-toast';
-import useStore from '../zustand/Store';
+// import useStore from '../zustand/Store';
 import { useRecoilState } from "recoil";
 import { cartState } from "../recoil/atoms"
 import { useAtom } from "jotai";
@@ -29,7 +29,7 @@ const Cart = observer(() => {
 
 
   //zustand,recoil,jotai,mobx
-  const { cartt, removeElement } = useStore()
+  // const { cartt, removeElement } = useStore()
   const [cartst, setCartst] = useRecoilState(cartState);
   const [cartjotai, setCartJotai] = useAtom(cartAtom);
   // console.log(toJS(cartStore.cart));
@@ -80,7 +80,7 @@ const Cart = observer(() => {
                   <TableCell><img
                     onClick={() => {
                       dispatch(remove_item(row))
-                      removeElement(row)
+                      // removeElement(row)
                       setCartst(removeRecoil(row))
                       setCartJotai(removeRecoil(row))
                       cartStore.removeElementMobx(row)
